@@ -22,7 +22,6 @@ class App extends Component {
       password:y.pwd
     }
     console.log(data);
-    
       axios.post('http://localhost:3002/api',data).then((res)=>{
         console.log("Response server :",res)
       })

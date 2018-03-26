@@ -16,11 +16,15 @@ class Getdata extends Component{
             });
           });
       }
+    //   hapus(){
+    //       var idx= this.refs.del;
+    //       axios.delete('http://localhost:3002/api/'+idx);
+    //   }
       render(){
         const data = this.state.dataUser.map((item, index) => {
             var nama = item.nama;
             var email = item.email;
-            return <tr><td key={index}>{nama}</td><td key={index}>{email}</td></tr>;
+            return <tr><td key={index}>{nama}</td><td key={index}>{email}</td><td key={index}><button type="submit" ref="del" className="btn btn-danger" onClick={()=>{this.hapus();}}>Delete</button></td></tr>;
           })
           return(
               <div>       
